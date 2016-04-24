@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A5C8F523FB8CEF87F6A7B773 /* libPods-StarredGithubRepos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA042BD6A4FA0CFF68C6848 /* libPods-StarredGithubRepos.a */; };
-		C0C5213AE5C28F96AD744D57 /* libPods-StarredGithubReposTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A9A0FCBD2E13B3F1437111 /* libPods-StarredGithubReposTests.a */; };
-		D1BFD87D48E4778EF622D86C /* libPods-StarredGithubReposUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F046EABAC42D062D67B6DFE0 /* libPods-StarredGithubReposUITests.a */; };
 		E226C7C61CCC0BFF00D9095C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C7C51CCC0BFF00D9095C /* AppDelegate.swift */; };
 		E226C7C81CCC0BFF00D9095C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C7C71CCC0BFF00D9095C /* ViewController.swift */; };
 		E226C7CB1CCC0BFF00D9095C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E226C7C91CCC0BFF00D9095C /* Main.storyboard */; };
@@ -17,6 +14,12 @@
 		E226C7D01CCC0BFF00D9095C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E226C7CE1CCC0BFF00D9095C /* LaunchScreen.storyboard */; };
 		E226C7DB1CCC0C0000D9095C /* StarredGithubReposTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C7DA1CCC0C0000D9095C /* StarredGithubReposTests.swift */; };
 		E226C7E61CCC0C0000D9095C /* StarredGithubReposUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C7E51CCC0C0000D9095C /* StarredGithubReposUITests.swift */; };
+		E226C7F51CCC268A00D9095C /* OctoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E226C7F41CCC268A00D9095C /* OctoKit.framework */; };
+		E226C7F71CCC269400D9095C /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E226C7F61CCC269400D9095C /* AFNetworking.framework */; };
+		E226C7F91CCC26A100D9095C /* ISO8601DateFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E226C7F81CCC26A100D9095C /* ISO8601DateFormatter.framework */; };
+		E6A939324D49712C363AC783 /* Pods_StarredGithubRepos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3A0C063D857B8920E8657F /* Pods_StarredGithubRepos.framework */; };
+		FBE697DB0A5888C0C81C62D5 /* Pods_StarredGithubReposUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CE44DD349111DF909D63CE /* Pods_StarredGithubReposUITests.framework */; };
+		FC6A14398AFA4D39B756BCDB /* Pods_StarredGithubReposTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98717FCDD97C96582CBE7A7 /* Pods_StarredGithubReposTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,11 +42,12 @@
 /* Begin PBXFileReference section */
 		111BCF9EED6E783279A1F2E9 /* Pods-StarredGithubRepos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarredGithubRepos.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarredGithubRepos/Pods-StarredGithubRepos.release.xcconfig"; sourceTree = "<group>"; };
 		1258FCA2D25CCFC1C0D6EF42 /* Pods-StarredGithubReposTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarredGithubReposTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarredGithubReposTests/Pods-StarredGithubReposTests.release.xcconfig"; sourceTree = "<group>"; };
-		5EA042BD6A4FA0CFF68C6848 /* libPods-StarredGithubRepos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StarredGithubRepos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22CE44DD349111DF909D63CE /* Pods_StarredGithubReposUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarredGithubReposUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A3A0C063D857B8920E8657F /* Pods_StarredGithubRepos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarredGithubRepos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F2466E5B48211E685ADD59C /* Pods-StarredGithubRepos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarredGithubRepos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarredGithubRepos/Pods-StarredGithubRepos.debug.xcconfig"; sourceTree = "<group>"; };
 		A0B882FCCD4548FA92FBBE6D /* Pods-StarredGithubReposUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarredGithubReposUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarredGithubReposUITests/Pods-StarredGithubReposUITests.release.xcconfig"; sourceTree = "<group>"; };
-		C4A9A0FCBD2E13B3F1437111 /* libPods-StarredGithubReposTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StarredGithubReposTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD907691E9E58249FA2EE7B /* Pods-StarredGithubReposTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarredGithubReposTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarredGithubReposTests/Pods-StarredGithubReposTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D98717FCDD97C96582CBE7A7 /* Pods_StarredGithubReposTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarredGithubReposTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA18E0645F771D5C38EA2963 /* Pods-StarredGithubReposUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarredGithubReposUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarredGithubReposUITests/Pods-StarredGithubReposUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E226C7C21CCC0BFF00D9095C /* StarredGithubRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarredGithubRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E226C7C51CCC0BFF00D9095C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +62,9 @@
 		E226C7E11CCC0C0000D9095C /* StarredGithubReposUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarredGithubReposUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E226C7E51CCC0C0000D9095C /* StarredGithubReposUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredGithubReposUITests.swift; sourceTree = "<group>"; };
 		E226C7E71CCC0C0000D9095C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F046EABAC42D062D67B6DFE0 /* libPods-StarredGithubReposUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StarredGithubReposUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E226C7F41CCC268A00D9095C /* OctoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OctoKit.framework; path = "../octokit.objc/build/Debug-iphoneos/OctoKit.framework"; sourceTree = "<group>"; };
+		E226C7F61CCC269400D9095C /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "../octokit.objc/External/OctoKitDependencies/build/Debug-iphoneos/AFNetworking.framework"; sourceTree = "<group>"; };
+		E226C7F81CCC26A100D9095C /* ISO8601DateFormatter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ISO8601DateFormatter.framework; path = "../octokit.objc/External/OctoKitDependencies/build/Debug-iphoneos/ISO8601DateFormatter.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +72,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5C8F523FB8CEF87F6A7B773 /* libPods-StarredGithubRepos.a in Frameworks */,
+				E226C7F91CCC26A100D9095C /* ISO8601DateFormatter.framework in Frameworks */,
+				E226C7F71CCC269400D9095C /* AFNetworking.framework in Frameworks */,
+				E226C7F51CCC268A00D9095C /* OctoKit.framework in Frameworks */,
+				E6A939324D49712C363AC783 /* Pods_StarredGithubRepos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0C5213AE5C28F96AD744D57 /* libPods-StarredGithubReposTests.a in Frameworks */,
+				FC6A14398AFA4D39B756BCDB /* Pods_StarredGithubReposTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1BFD87D48E4778EF622D86C /* libPods-StarredGithubReposUITests.a in Frameworks */,
+				FBE697DB0A5888C0C81C62D5 /* Pods_StarredGithubReposUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,9 +101,12 @@
 		DC9EABE5468F1B77CC735416 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5EA042BD6A4FA0CFF68C6848 /* libPods-StarredGithubRepos.a */,
-				C4A9A0FCBD2E13B3F1437111 /* libPods-StarredGithubReposTests.a */,
-				F046EABAC42D062D67B6DFE0 /* libPods-StarredGithubReposUITests.a */,
+				E226C7F81CCC26A100D9095C /* ISO8601DateFormatter.framework */,
+				E226C7F61CCC269400D9095C /* AFNetworking.framework */,
+				E226C7F41CCC268A00D9095C /* OctoKit.framework */,
+				4A3A0C063D857B8920E8657F /* Pods_StarredGithubRepos.framework */,
+				D98717FCDD97C96582CBE7A7 /* Pods_StarredGithubReposTests.framework */,
+				22CE44DD349111DF909D63CE /* Pods_StarredGithubReposUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

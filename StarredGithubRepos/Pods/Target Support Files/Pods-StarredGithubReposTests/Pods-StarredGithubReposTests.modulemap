@@ -1,0 +1,6 @@
+framework module Pods_StarredGithubReposTests {
+  umbrella header "Pods-StarredGithubReposTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
