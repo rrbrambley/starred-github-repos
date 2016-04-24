@@ -17,6 +17,9 @@
 		E226C7F51CCC268A00D9095C /* OctoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E226C7F41CCC268A00D9095C /* OctoKit.framework */; };
 		E226C7F71CCC269400D9095C /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E226C7F61CCC269400D9095C /* AFNetworking.framework */; };
 		E226C7F91CCC26A100D9095C /* ISO8601DateFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E226C7F81CCC26A100D9095C /* ISO8601DateFormatter.framework */; };
+		E226C7FC1CCD432800D9095C /* GithubDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C7FB1CCD432800D9095C /* GithubDataManager.swift */; };
+		E226C7FD1CCD432800D9095C /* GithubDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C7FB1CCD432800D9095C /* GithubDataManager.swift */; };
+		E226C7FE1CCD432800D9095C /* GithubDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C7FB1CCD432800D9095C /* GithubDataManager.swift */; };
 		E6A939324D49712C363AC783 /* Pods_StarredGithubRepos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3A0C063D857B8920E8657F /* Pods_StarredGithubRepos.framework */; };
 		FBE697DB0A5888C0C81C62D5 /* Pods_StarredGithubReposUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CE44DD349111DF909D63CE /* Pods_StarredGithubReposUITests.framework */; };
 		FC6A14398AFA4D39B756BCDB /* Pods_StarredGithubReposTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98717FCDD97C96582CBE7A7 /* Pods_StarredGithubReposTests.framework */; };
@@ -65,6 +68,7 @@
 		E226C7F41CCC268A00D9095C /* OctoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OctoKit.framework; path = "../octokit.objc/build/Debug-iphoneos/OctoKit.framework"; sourceTree = "<group>"; };
 		E226C7F61CCC269400D9095C /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "../octokit.objc/External/OctoKitDependencies/build/Debug-iphoneos/AFNetworking.framework"; sourceTree = "<group>"; };
 		E226C7F81CCC26A100D9095C /* ISO8601DateFormatter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ISO8601DateFormatter.framework; path = "../octokit.objc/External/OctoKitDependencies/build/Debug-iphoneos/ISO8601DateFormatter.framework"; sourceTree = "<group>"; };
+		E226C7FB1CCD432800D9095C /* GithubDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,7 @@
 		E226C7C41CCC0BFF00D9095C /* StarredGithubRepos */ = {
 			isa = PBXGroup;
 			children = (
+				E226C7FA1CCD42F700D9095C /* Manager */,
 				E226C7C51CCC0BFF00D9095C /* AppDelegate.swift */,
 				E226C7C71CCC0BFF00D9095C /* ViewController.swift */,
 				E226C7C91CCC0BFF00D9095C /* Main.storyboard */,
@@ -162,6 +167,14 @@
 				E226C7E71CCC0C0000D9095C /* Info.plist */,
 			);
 			path = StarredGithubReposUITests;
+			sourceTree = "<group>";
+		};
+		E226C7FA1CCD42F700D9095C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E226C7FB1CCD432800D9095C /* GithubDataManager.swift */,
+			);
+			name = Manager;
 			sourceTree = "<group>";
 		};
 		F0CEBB33CFA1E28175C6BE3E /* Pods */ = {
@@ -439,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E226C7FC1CCD432800D9095C /* GithubDataManager.swift in Sources */,
 				E226C7C81CCC0BFF00D9095C /* ViewController.swift in Sources */,
 				E226C7C61CCC0BFF00D9095C /* AppDelegate.swift in Sources */,
 			);
@@ -448,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E226C7FD1CCD432800D9095C /* GithubDataManager.swift in Sources */,
 				E226C7DB1CCC0C0000D9095C /* StarredGithubReposTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +471,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E226C7FE1CCD432800D9095C /* GithubDataManager.swift in Sources */,
 				E226C7E61CCC0C0000D9095C /* StarredGithubReposUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
