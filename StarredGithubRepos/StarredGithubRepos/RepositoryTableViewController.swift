@@ -15,33 +15,25 @@ class RepositoryTableViewController: UITableViewController {
     
     let reuseIdentifier: String = "RepositoryCell"
     
+    //MARK: Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = "repository_table_view:title".localized
         self.tableView.registerNib(UINib.init(nibName: "RepositoryTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
         self.refreshControl!.beginRefreshing()
+        
+        fetchRepositories()
     }
 
-    override func viewDidAppear(animated: Bool) {
-        GithubDataManager.sharedInstance.fetchStarredRepositories { (repositories: Array<OCTRepository>) in
-            self.refreshControl?.endRefreshing()
-            self.repositories = repositories
-            
-            for repository in repositories {
-//                print("repository: \(repository.name) \(repository.stargazersCount)")
-                print("/repos/\(repository.ownerLogin)/\(repository.name)/contributors")
-            }
-            
-//            GithubDataManager.sharedInstance.fetchContributors(repositories[0], completion: { (contributors: Array<OCTContributor>) in
-//                for c in contributors {
-//                    print("\(c.login, c.contributions)")
-//                }
-//            })
-            
-            self.tableView.reloadData()
-        }
+    //MARK: UITableViewDelegate
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
     }
+    
+    //MARK: UITableViewDataSource
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let repository: OCTRepository = repositories![indexPath.row]
@@ -54,9 +46,23 @@ class RepositoryTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.repositories == nil ? 0 : self.repositories!.count
     }
-
-//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        
-//    }
+    
+    //MARK: Internal
+    
+    private func fetchRepositories() {
+        GithubDataManager.sharedInstance.fetchStarredRepositories { (repositories: Array<OCTRepository>) in
+            self.refreshControl?.endRefreshing()
+            self.repositories = repositories
+            self.tableView.reloadData()
+        }
+    }
+    
+    private func fetchContributors(repository: OCTRepository) {
+        GithubDataManager.sharedInstance.fetchContributors(repository, completion: { (contributors: Array<OCTContributor>) in
+            for c in contributors {
+                print("\(c.login, c.contributions)")
+            }
+        })
+    }
 }
 
