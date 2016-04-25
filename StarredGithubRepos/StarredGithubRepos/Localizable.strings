@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  StarredGithubRepos
+
+  Created by Robert Brambley on 4/25/16.
+  Copyright © 2016 AATT. All rights reserved.
+*/
+
+"repository_table_view:title" = "Most Starred Repositories";

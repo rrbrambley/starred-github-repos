@@ -23,7 +23,7 @@ class GithubDataManager {
         var repositories: Array<OCTRepository> = Array<OCTRepository>()
         
         let signal: RACSignal = client!.searchRepositoriesWithQuery("stars:>0", orderBy:"stars", ascending:false)
-        signal.subscribeNext(
+        signal.deliverOn(RACScheduler.mainThreadScheduler()).subscribeNext(
             { (repositorySearchResults: AnyObject!) -> Void in
                 repositories.appendContentsOf(repositorySearchResults.repositories as! Array)//(repository as? OCTRepository)!)
             },
@@ -40,7 +40,7 @@ class GithubDataManager {
     
     func fetchContributors(repository: OCTRepository, completion: (Array<OCTContributor> -> Void)!) {
         let signal: RACSignal = client!.fetchRepositoryContributors(repository)
-        signal.collect().subscribeNext(
+        signal.collect().deliverOn(RACScheduler.mainThreadScheduler()).subscribeNext(
             { (contributors: AnyObject!) -> Void in
                 if(completion != nil) {
                     completion(contributors as! Array)
@@ -50,6 +50,5 @@ class GithubDataManager {
                 print(error.localizedDescription)
             }
         )
-        
     }
 }
