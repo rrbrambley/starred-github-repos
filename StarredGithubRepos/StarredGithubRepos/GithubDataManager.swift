@@ -15,8 +15,18 @@ class GithubDataManager {
     private var client: OCTClient?
     
     init() {
-        let user: OCTUser = OCTUser.init(rawLogin: "login", server: OCTServer.dotComServer())
-        client = OCTClient.unauthenticatedClientWithUser(user)
+        initClient()
+    }
+    
+    func initClient() {
+        if GithubAuthParams.isLoggedIn() {
+            let (username, token) = GithubAuthParams.authParams()!;
+            let user: OCTUser = OCTUser.init(rawLogin: username, server: OCTServer.dotComServer())
+            client = OCTClient.authenticatedClientWithUser(user, token:token)
+        } else {
+            let user: OCTUser = OCTUser.init(rawLogin: "login", server: OCTServer.dotComServer())
+            client = OCTClient.unauthenticatedClientWithUser(user)
+        }
     }
 
     func fetchStarredRepositories(completion: (Array<OCTRepository> -> Void)!) {

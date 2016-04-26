@@ -68,6 +68,7 @@ class LoginViewController: UIViewController {
     
     private func didAuthenticateWithClient(client: OCTClient) {
         GithubAuthParams.save(client.token, username: client.user.rawLogin)
+        GithubDataManager.sharedInstance.initClient()
         AppDelegate.sharedDelegate().updateApplicationState()
     }
     

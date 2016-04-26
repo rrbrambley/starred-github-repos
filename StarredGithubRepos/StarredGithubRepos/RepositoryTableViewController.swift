@@ -54,14 +54,17 @@ class RepositoryTableViewController: UITableViewController {
             self.refreshControl?.endRefreshing()
             self.repositories = repositories
             self.tableView.reloadData()
+            
+            for r in repositories {
+                self.fetchContributors(r)
+            }
         }
     }
     
     private func fetchContributors(repository: OCTRepository) {
         GithubDataManager.sharedInstance.fetchContributors(repository, completion: { (contributors: Array<OCTContributor>) in
-            for c in contributors {
-                print("\(c.login, c.contributions)")
-            }
+            let c: OCTContributor = contributors.first!
+            print("repository: \(repository.name); top contributor: \(c.login, c.contributions)")
         })
     }
 }
