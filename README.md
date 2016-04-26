@@ -7,7 +7,7 @@ This simple Swift app uses the Github API (via OctoKit) to fetch the 100 most st
 
 ## Nuances
 
-* This project uses a fork of the Objective-C [OctoKit](https://github.com/rrbrambley/octokit.objc) as a git submodule rather than a cocoapod because:
+* This project uses a fork of the Objective-C [OctoKit](https://github.com/rrbrambley/octokit.objc) because 
     1. There is no podspec for version 0.7.7, which includes the search functionality
     2. No one had previously written support for fetching contributors for a particular repository.
 * Because this app fires off requests to get contributors for every repository returned in the initial repository search request, we need to use authentication so that we can make more than 60 requests per hour (there are 101 requests used to display the data in this app).
@@ -17,11 +17,8 @@ This simple Swift app uses the Github API (via OctoKit) to fetch the 100 most st
 To fetch the code:
 
 1. Run `git clone git@github.com:rrbrambley/starred-github-repos.git`
-2. From the root of the repo, `git submodule update --init --recursive`.
-3. Run `brew install xctool` (required for next step)
-4. Run `./octokit.objc/script/bootstrap` as described [here](https://github.com/octokit/octokit.objc#importing-octokit).
-5. Run `pod install` from the root of the StarredGithubRepos Xcode project.
-6. Open `StarredGithubRepos.xcworkspace` in Xcode
+2. Run `pod install` from the root of the StarredGithubRepos Xcode project.
+3. Open `StarredGithubRepos.xcworkspace` in Xcode
 
 The client ID and secret are stored in a `Secrets.plist` file in the Xcode project, which is not committed to this repository. Following these instructions to add your own client ID and secret:
 
