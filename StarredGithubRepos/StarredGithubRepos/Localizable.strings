@@ -8,3 +8,4 @@
 
 "login:submit" = "Submit";
 "repository_table_view:title" = "Most Starred Repositories";
+"repository_cell:contributor" = "Top Contributor: ";

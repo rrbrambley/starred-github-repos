@@ -12,6 +12,7 @@ import UIKit
 class RepositoryTableViewController: UITableViewController {
 
     private var repositories: Array<OCTRepository>?
+    private var contributors = [String: OCTContributor]()
     
     let reuseIdentifier: String = "RepositoryCell"
     
@@ -21,7 +22,7 @@ class RepositoryTableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.navigationItem.title = "repository_table_view:title".localized
-        self.tableView.registerNib(UINib.init(nibName: "RepositoryTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
+        self.tableView.allowsSelection = false
         self.refreshControl!.beginRefreshing()
         
         fetchRepositories()
@@ -29,8 +30,8 @@ class RepositoryTableViewController: UITableViewController {
 
     //MARK: UITableViewDelegate
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return RepositoryTableViewCell.heightForCell()
     }
     
     //MARK: UITableViewDataSource
@@ -40,6 +41,16 @@ class RepositoryTableViewController: UITableViewController {
         let cell: RepositoryTableViewCell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! RepositoryTableViewCell
         cell.nameLabel.text = repository.name
         cell.starCountLabel.text = String(repository.stargazersCount)
+        
+        if let contributor = contributors[repository.objectID] {
+            cell.contributorNameLabel.text = contributor.name
+            cell.contributorActivityIndicator.hidden = true
+            cell.contributorActivityIndicator.stopAnimating()
+        } else {
+            cell.contributorActivityIndicator.startAnimating()
+            cell.contributorActivityIndicator.hidden = false
+        }
+        
         return cell
     }
     
@@ -55,15 +66,17 @@ class RepositoryTableViewController: UITableViewController {
             self.repositories = repositories
             self.tableView.reloadData()
             
-            for r in repositories {
-                self.fetchContributors(r)
+            for i in 0...repositories.count-1 {
+                self.fetchContributors(repositories[i], index: i)
             }
         }
     }
     
-    private func fetchContributors(repository: OCTRepository) {
+    private func fetchContributors(repository: OCTRepository, index: Int) {
         GithubDataManager.sharedInstance.fetchContributors(repository, completion: { (contributors: Array<OCTContributor>) in
             let c: OCTContributor = contributors.first!
+            self.contributors[repository.objectID] = c
+            self.tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: index, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
             print("repository: \(repository.name); top contributor: \(c.login, c.contributions)")
         })
     }

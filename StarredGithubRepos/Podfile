@@ -8,6 +8,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'StarredGithubRepos' do
 pod 'Locksmith', '~> 2.0.8'
+pod 'PureLayout', '~> 3.0.1'
 end
 
 target 'StarredGithubReposTests' do

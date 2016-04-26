@@ -17,9 +17,6 @@
 		E226C7FC1CCD432800D9095C /* GithubDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C7FB1CCD432800D9095C /* GithubDataManager.swift */; };
 		E226C8101CCD70F100D9095C /* OctoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E226C80F1CCD70F100D9095C /* OctoKit.framework */; };
 		E226C8201CCD9F8C00D9095C /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C81F1CCD9F8C00D9095C /* RepositoryTableViewCell.swift */; };
-		E226C8261CCE6C1C00D9095C /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E226C8251CCE6C1C00D9095C /* RepositoryTableViewCell.xib */; };
-		E226C8271CCE6C1C00D9095C /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E226C8251CCE6C1C00D9095C /* RepositoryTableViewCell.xib */; };
-		E226C8281CCE6C1C00D9095C /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E226C8251CCE6C1C00D9095C /* RepositoryTableViewCell.xib */; };
 		E226C82A1CCE7AAB00D9095C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E226C8291CCE7AAB00D9095C /* Localizable.strings */; };
 		E226C82B1CCE7AAB00D9095C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E226C8291CCE7AAB00D9095C /* Localizable.strings */; };
 		E226C82C1CCE7AAB00D9095C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E226C8291CCE7AAB00D9095C /* Localizable.strings */; };
@@ -81,7 +78,6 @@
 		E226C7FB1CCD432800D9095C /* GithubDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubDataManager.swift; sourceTree = "<group>"; };
 		E226C80F1CCD70F100D9095C /* OctoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OctoKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/StarredGithubRepos-afdypqlrrsaufpdozoaqvijlcdqu/Build/Products/Debug-iphonesimulator/OctoKit.framework"; sourceTree = "<group>"; };
 		E226C81F1CCD9F8C00D9095C /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
-		E226C8251CCE6C1C00D9095C /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
 		E226C8291CCE7AAB00D9095C /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E226C82E1CCE7B3D00D9095C /* Localize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localize.swift; sourceTree = "<group>"; };
 		E226C8321CCEFAF500D9095C /* Secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
@@ -228,7 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				E226C81F1CCD9F8C00D9095C /* RepositoryTableViewCell.swift */,
-				E226C8251CCE6C1C00D9095C /* RepositoryTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -366,7 +361,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E226C8261CCE6C1C00D9095C /* RepositoryTableViewCell.xib in Resources */,
 				E226C82A1CCE7AAB00D9095C /* Localizable.strings in Resources */,
 				E226C83A1CCEFCD700D9095C /* Login.storyboard in Resources */,
 				E226C7D01CCC0BFF00D9095C /* LaunchScreen.storyboard in Resources */,
@@ -381,7 +375,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E226C82B1CCE7AAB00D9095C /* Localizable.strings in Resources */,
-				E226C8271CCE6C1C00D9095C /* RepositoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +383,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E226C82C1CCE7AAB00D9095C /* Localizable.strings in Resources */,
-				E226C8281CCE6C1C00D9095C /* RepositoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

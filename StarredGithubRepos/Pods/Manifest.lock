@@ -1,12 +1,15 @@
 PODS:
   - Locksmith (2.0.8)
+  - PureLayout (3.0.1)
 
 DEPENDENCIES:
   - Locksmith (~> 2.0.8)
+  - PureLayout (~> 3.0.1)
 
 SPEC CHECKSUMS:
   Locksmith: a8ed41ac4c06506ea8cb199d8ec8a8d3d108eb2a
+  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
 
-PODFILE CHECKSUM: 77b3137c3ee44fbf287c6fbd232f3afc0251cd5c
+PODFILE CHECKSUM: 55e0265a713c57f931b87e6bf856680946371ca9
 
 COCOAPODS: 1.0.0.beta.8
