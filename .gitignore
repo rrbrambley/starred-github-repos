@@ -63,4 +63,4 @@ fastlane/report.xml
 fastlane/screenshots
 
 # other
-Secrets.plist
+StarredGithubRepos/StarredGithubRepos/Secrets.plist
