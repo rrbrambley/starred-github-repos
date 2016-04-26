@@ -12,17 +12,11 @@
 		E226C7CB1CCC0BFF00D9095C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E226C7C91CCC0BFF00D9095C /* Main.storyboard */; };
 		E226C7CD1CCC0BFF00D9095C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E226C7CC1CCC0BFF00D9095C /* Assets.xcassets */; };
 		E226C7D01CCC0BFF00D9095C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E226C7CE1CCC0BFF00D9095C /* LaunchScreen.storyboard */; };
-		E226C7DB1CCC0C0000D9095C /* StarredGithubReposTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C7DA1CCC0C0000D9095C /* StarredGithubReposTests.swift */; };
-		E226C7E61CCC0C0000D9095C /* StarredGithubReposUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C7E51CCC0C0000D9095C /* StarredGithubReposUITests.swift */; };
 		E226C7F71CCC269400D9095C /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E226C7F61CCC269400D9095C /* AFNetworking.framework */; };
 		E226C7F91CCC26A100D9095C /* ISO8601DateFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E226C7F81CCC26A100D9095C /* ISO8601DateFormatter.framework */; };
 		E226C7FC1CCD432800D9095C /* GithubDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C7FB1CCD432800D9095C /* GithubDataManager.swift */; };
-		E226C7FD1CCD432800D9095C /* GithubDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C7FB1CCD432800D9095C /* GithubDataManager.swift */; };
-		E226C7FE1CCD432800D9095C /* GithubDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C7FB1CCD432800D9095C /* GithubDataManager.swift */; };
 		E226C8101CCD70F100D9095C /* OctoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E226C80F1CCD70F100D9095C /* OctoKit.framework */; };
 		E226C8201CCD9F8C00D9095C /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C81F1CCD9F8C00D9095C /* RepositoryTableViewCell.swift */; };
-		E226C8211CCD9F8C00D9095C /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C81F1CCD9F8C00D9095C /* RepositoryTableViewCell.swift */; };
-		E226C8221CCD9F8C00D9095C /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C81F1CCD9F8C00D9095C /* RepositoryTableViewCell.swift */; };
 		E226C8261CCE6C1C00D9095C /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E226C8251CCE6C1C00D9095C /* RepositoryTableViewCell.xib */; };
 		E226C8271CCE6C1C00D9095C /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E226C8251CCE6C1C00D9095C /* RepositoryTableViewCell.xib */; };
 		E226C8281CCE6C1C00D9095C /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E226C8251CCE6C1C00D9095C /* RepositoryTableViewCell.xib */; };
@@ -30,8 +24,12 @@
 		E226C82B1CCE7AAB00D9095C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E226C8291CCE7AAB00D9095C /* Localizable.strings */; };
 		E226C82C1CCE7AAB00D9095C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E226C8291CCE7AAB00D9095C /* Localizable.strings */; };
 		E226C82F1CCE7B3D00D9095C /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C82E1CCE7B3D00D9095C /* Localize.swift */; };
-		E226C8301CCE7B3D00D9095C /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C82E1CCE7B3D00D9095C /* Localize.swift */; };
-		E226C8311CCE7B3D00D9095C /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C82E1CCE7B3D00D9095C /* Localize.swift */; };
+		E226C8331CCEFAF500D9095C /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = E226C8321CCEFAF500D9095C /* Secrets.plist */; };
+		E226C8351CCEFC2D00D9095C /* GithubClientUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C8341CCEFC2D00D9095C /* GithubClientUtility.swift */; };
+		E226C8371CCEFC9D00D9095C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C8361CCEFC9D00D9095C /* LoginViewController.swift */; };
+		E226C83A1CCEFCD700D9095C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E226C8391CCEFCD700D9095C /* Login.storyboard */; };
+		E226C83D1CCEFE7800D9095C /* GithubAuthParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C83C1CCEFE7800D9095C /* GithubAuthParams.swift */; };
+		E226C83F1CCF0B0500D9095C /* TwoFactorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226C83E1CCF0B0500D9095C /* TwoFactorViewController.swift */; };
 		E6A939324D49712C363AC783 /* Pods_StarredGithubRepos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3A0C063D857B8920E8657F /* Pods_StarredGithubRepos.framework */; };
 		FBE697DB0A5888C0C81C62D5 /* Pods_StarredGithubReposUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CE44DD349111DF909D63CE /* Pods_StarredGithubReposUITests.framework */; };
 		FC6A14398AFA4D39B756BCDB /* Pods_StarredGithubReposTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98717FCDD97C96582CBE7A7 /* Pods_StarredGithubReposTests.framework */; };
@@ -86,6 +84,12 @@
 		E226C8251CCE6C1C00D9095C /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
 		E226C8291CCE7AAB00D9095C /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E226C82E1CCE7B3D00D9095C /* Localize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localize.swift; sourceTree = "<group>"; };
+		E226C8321CCEFAF500D9095C /* Secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
+		E226C8341CCEFC2D00D9095C /* GithubClientUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubClientUtility.swift; sourceTree = "<group>"; };
+		E226C8361CCEFC9D00D9095C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E226C8391CCEFCD700D9095C /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		E226C83C1CCEFE7800D9095C /* GithubAuthParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAuthParams.swift; sourceTree = "<group>"; };
+		E226C83E1CCF0B0500D9095C /* TwoFactorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoFactorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,15 +162,19 @@
 		E226C7C41CCC0BFF00D9095C /* StarredGithubRepos */ = {
 			isa = PBXGroup;
 			children = (
+				E226C83B1CCEFE6500D9095C /* Data */,
 				E226C81E1CCD9EB100D9095C /* Controller */,
 				E226C7FA1CCD42F700D9095C /* Manager */,
+				E226C8381CCEFCAC00D9095C /* View */,
 				E226C82D1CCE7B0700D9095C /* Utility */,
 				E226C7C51CCC0BFF00D9095C /* AppDelegate.swift */,
+				E226C8391CCEFCD700D9095C /* Login.storyboard */,
 				E226C7C91CCC0BFF00D9095C /* Main.storyboard */,
 				E226C7CC1CCC0BFF00D9095C /* Assets.xcassets */,
 				E226C7CE1CCC0BFF00D9095C /* LaunchScreen.storyboard */,
 				E226C7D11CCC0BFF00D9095C /* Info.plist */,
 				E226C8291CCE7AAB00D9095C /* Localizable.strings */,
+				E226C8321CCEFAF500D9095C /* Secrets.plist */,
 			);
 			path = StarredGithubRepos;
 			sourceTree = "<group>";
@@ -200,9 +208,9 @@
 		E226C81E1CCD9EB100D9095C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E226C8361CCEFC9D00D9095C /* LoginViewController.swift */,
 				E226C7C71CCC0BFF00D9095C /* RepositoryTableViewController.swift */,
-				E226C81F1CCD9F8C00D9095C /* RepositoryTableViewCell.swift */,
-				E226C8251CCE6C1C00D9095C /* RepositoryTableViewCell.xib */,
+				E226C83E1CCF0B0500D9095C /* TwoFactorViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -211,8 +219,26 @@
 			isa = PBXGroup;
 			children = (
 				E226C82E1CCE7B3D00D9095C /* Localize.swift */,
+				E226C8341CCEFC2D00D9095C /* GithubClientUtility.swift */,
 			);
 			name = Utility;
+			sourceTree = "<group>";
+		};
+		E226C8381CCEFCAC00D9095C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E226C81F1CCD9F8C00D9095C /* RepositoryTableViewCell.swift */,
+				E226C8251CCE6C1C00D9095C /* RepositoryTableViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E226C83B1CCEFE6500D9095C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E226C83C1CCEFE7800D9095C /* GithubAuthParams.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		F0CEBB33CFA1E28175C6BE3E /* Pods */ = {
@@ -342,9 +368,11 @@
 			files = (
 				E226C8261CCE6C1C00D9095C /* RepositoryTableViewCell.xib in Resources */,
 				E226C82A1CCE7AAB00D9095C /* Localizable.strings in Resources */,
+				E226C83A1CCEFCD700D9095C /* Login.storyboard in Resources */,
 				E226C7D01CCC0BFF00D9095C /* LaunchScreen.storyboard in Resources */,
 				E226C7CD1CCC0BFF00D9095C /* Assets.xcassets in Resources */,
 				E226C7CB1CCC0BFF00D9095C /* Main.storyboard in Resources */,
+				E226C8331CCEFAF500D9095C /* Secrets.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,8 +524,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E226C8371CCEFC9D00D9095C /* LoginViewController.swift in Sources */,
+				E226C83F1CCF0B0500D9095C /* TwoFactorViewController.swift in Sources */,
 				E226C82F1CCE7B3D00D9095C /* Localize.swift in Sources */,
+				E226C83D1CCEFE7800D9095C /* GithubAuthParams.swift in Sources */,
 				E226C7FC1CCD432800D9095C /* GithubDataManager.swift in Sources */,
+				E226C8351CCEFC2D00D9095C /* GithubClientUtility.swift in Sources */,
 				E226C7C81CCC0BFF00D9095C /* RepositoryTableViewController.swift in Sources */,
 				E226C8201CCD9F8C00D9095C /* RepositoryTableViewCell.swift in Sources */,
 				E226C7C61CCC0BFF00D9095C /* AppDelegate.swift in Sources */,
@@ -508,10 +540,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E226C7FD1CCD432800D9095C /* GithubDataManager.swift in Sources */,
-				E226C8301CCE7B3D00D9095C /* Localize.swift in Sources */,
-				E226C7DB1CCC0C0000D9095C /* StarredGithubReposTests.swift in Sources */,
-				E226C8211CCD9F8C00D9095C /* RepositoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,10 +547,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E226C7FE1CCD432800D9095C /* GithubDataManager.swift in Sources */,
-				E226C8311CCE7B3D00D9095C /* Localize.swift in Sources */,
-				E226C7E61CCC0C0000D9095C /* StarredGithubReposUITests.swift in Sources */,
-				E226C8221CCD9F8C00D9095C /* RepositoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

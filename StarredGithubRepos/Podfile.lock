@@ -1,3 +1,12 @@
-PODFILE CHECKSUM: 047f755a5c2acd200d7f33f69e2e26dc05a9b4ef
+PODS:
+  - Locksmith (2.0.8)
+
+DEPENDENCIES:
+  - Locksmith (~> 2.0.8)
+
+SPEC CHECKSUMS:
+  Locksmith: a8ed41ac4c06506ea8cb199d8ec8a8d3d108eb2a
+
+PODFILE CHECKSUM: 77b3137c3ee44fbf287c6fbd232f3afc0251cd5c
 
 COCOAPODS: 1.0.0.beta.8

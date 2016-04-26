@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6IW-lL-ApB">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="VHT-A2-izd">
+            <objects>
+                <navigationController id="6IW-lL-ApB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3gD-Fy-FO1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MRd-P7-mwo" kind="relationship" relationship="rootViewController" id="6hq-A3-vlT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s12-tJ-7ii" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="405" y="298"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="322-Wy-x26">
+            <objects>
+                <viewController id="MRd-P7-mwo" customClass="LoginViewController" customModule="StarredGithubRepos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dFb-yW-zY6"/>
+                        <viewControllerLayoutGuide type="bottom" id="DY2-BB-Nqg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MRu-2Y-71s">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Github Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tx2-Om-DpG">
+                                <rect key="frame" x="20" y="81" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2b3-j6-enc">
+                                <rect key="frame" x="20" y="119" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2b3-j6-enc" firstAttribute="top" secondItem="tx2-Om-DpG" secondAttribute="bottom" constant="8" id="0lt-TT-s7n"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tx2-Om-DpG" secondAttribute="trailing" id="2z7-0X-Hpi"/>
+                            <constraint firstItem="tx2-Om-DpG" firstAttribute="top" secondItem="dFb-yW-zY6" secondAttribute="bottom" constant="17" id="V6S-Fp-kjf"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="2b3-j6-enc" secondAttribute="leading" id="eMk-uz-D1E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2b3-j6-enc" secondAttribute="trailing" id="p1M-Gt-FR6"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="tx2-Om-DpG" secondAttribute="leading" id="s5c-SE-QiU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pOO-Px-Gcq"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="2b3-j6-enc" id="cic-6V-Bl0"/>
+                        <outlet property="usernameTextField" destination="tx2-Om-DpG" id="OTM-GN-g4x"/>
+                        <segue destination="Uzr-4p-YvT" kind="show" identifier="TwoFactor" id="RTm-v5-WIG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YZC-0f-JSp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1262" y="298"/>
+        </scene>
+        <!--Two Factor View Controller-->
+        <scene sceneID="6ca-Uf-2ir">
+            <objects>
+                <viewController id="Uzr-4p-YvT" customClass="TwoFactorViewController" customModule="StarredGithubRepos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r1e-1k-4Y1"/>
+                        <viewControllerLayoutGuide type="bottom" id="C49-Ie-Miu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RqI-gg-d1S">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your Github 2FA code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zn-uK-y41">
+                                <rect key="frame" x="20" y="144" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jnl-Er-Inm">
+                                <rect key="frame" x="20" y="205" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="Jnl-Er-Inm" secondAttribute="leading" id="PH8-Av-VPQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jnl-Er-Inm" secondAttribute="trailing" id="gOU-ij-Sgk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6Zn-uK-y41" secondAttribute="trailing" id="j39-oi-b7L"/>
+                            <constraint firstItem="Jnl-Er-Inm" firstAttribute="top" secondItem="6Zn-uK-y41" secondAttribute="bottom" constant="40" id="mSY-kU-vvQ"/>
+                            <constraint firstItem="6Zn-uK-y41" firstAttribute="top" secondItem="r1e-1k-4Y1" secondAttribute="bottom" constant="80" id="n4t-Ud-L1t"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="6Zn-uK-y41" secondAttribute="leading" id="pEv-gX-Lmy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="codeTextField" destination="Jnl-Er-Inm" id="AUN-wf-8Jz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RNE-hw-5lw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2005" y="298"/>
+        </scene>
+    </scenes>
+</document>

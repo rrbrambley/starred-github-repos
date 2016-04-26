@@ -6,4 +6,5 @@
   Copyright © 2016 AATT. All rights reserved.
 */
 
+"login:submit" = "Submit";
 "repository_table_view:title" = "Most Starred Repositories";
