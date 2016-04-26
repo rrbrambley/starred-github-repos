@@ -44,19 +44,29 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fue-lb-RAy">
+                                <rect key="frame" x="20" y="184" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2b3-j6-enc" firstAttribute="top" secondItem="tx2-Om-DpG" secondAttribute="bottom" constant="8" id="0lt-TT-s7n"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tx2-Om-DpG" secondAttribute="trailing" id="2z7-0X-Hpi"/>
+                            <constraint firstItem="fue-lb-RAy" firstAttribute="top" secondItem="2b3-j6-enc" secondAttribute="bottom" constant="35" id="CsM-q4-qW5"/>
                             <constraint firstItem="tx2-Om-DpG" firstAttribute="top" secondItem="dFb-yW-zY6" secondAttribute="bottom" constant="17" id="V6S-Fp-kjf"/>
                             <constraint firstAttribute="leadingMargin" secondItem="2b3-j6-enc" secondAttribute="leading" id="eMk-uz-D1E"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2b3-j6-enc" secondAttribute="trailing" id="p1M-Gt-FR6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fue-lb-RAy" secondAttribute="trailing" id="qQB-FS-RuX"/>
                             <constraint firstAttribute="leadingMargin" secondItem="tx2-Om-DpG" secondAttribute="leading" id="s5c-SE-QiU"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="fue-lb-RAy" secondAttribute="leading" id="z1T-Ei-k4k"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pOO-Px-Gcq"/>
                     <connections>
+                        <outlet property="errorLabel" destination="fue-lb-RAy" id="jMm-5e-c5h"/>
                         <outlet property="passwordTextField" destination="2b3-j6-enc" id="cic-6V-Bl0"/>
                         <outlet property="usernameTextField" destination="tx2-Om-DpG" id="OTM-GN-g4x"/>
                         <segue destination="Uzr-4p-YvT" kind="show" identifier="TwoFactor" id="RTm-v5-WIG"/>
@@ -81,7 +91,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your Github 2FA code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zn-uK-y41">
                                 <rect key="frame" x="20" y="144" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jnl-Er-Inm">
@@ -89,10 +99,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yL-dq-m2h">
+                                <rect key="frame" x="20" y="282" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="5yL-dq-m2h" secondAttribute="trailing" id="08o-ei-zJU"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="5yL-dq-m2h" secondAttribute="leading" id="5HK-Nc-fbf"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Jnl-Er-Inm" secondAttribute="leading" id="PH8-Av-VPQ"/>
+                            <constraint firstItem="5yL-dq-m2h" firstAttribute="top" secondItem="Jnl-Er-Inm" secondAttribute="bottom" constant="47" id="dmC-qF-IlP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Jnl-Er-Inm" secondAttribute="trailing" id="gOU-ij-Sgk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6Zn-uK-y41" secondAttribute="trailing" id="j39-oi-b7L"/>
                             <constraint firstItem="Jnl-Er-Inm" firstAttribute="top" secondItem="6Zn-uK-y41" secondAttribute="bottom" constant="40" id="mSY-kU-vvQ"/>
@@ -102,6 +121,7 @@
                     </view>
                     <connections>
                         <outlet property="codeTextField" destination="Jnl-Er-Inm" id="AUN-wf-8Jz"/>
+                        <outlet property="errorLabel" destination="5yL-dq-m2h" id="3SN-U4-Bbq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNE-hw-5lw" userLabel="First Responder" sceneMemberID="firstResponder"/>

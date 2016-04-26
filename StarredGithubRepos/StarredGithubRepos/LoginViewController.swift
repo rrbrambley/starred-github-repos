@@ -9,10 +9,11 @@
 import OctoKit
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
     
     var submitButton: UIBarButtonItem!
     
@@ -21,6 +22,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
         addSubmitButton()
     }
     
@@ -35,7 +38,18 @@ class LoginViewController: UIViewController {
     //MARK: Actions
     
     func didTapSubmitButton() {
-        signIn(nil)
+        signIn()
+    }
+    
+    //MARK: UITextFieldDelegate
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == passwordTextField {
+            textField.resignFirstResponder()
+            signIn()
+            return false
+        }
+        return true
     }
     
     //MARK: Internal
@@ -45,13 +59,16 @@ class LoginViewController: UIViewController {
         navigationItem.rightBarButtonItem = submitButton
     }
     
-    private func signIn(oneTimePassword: String?) {
+    private func signIn() {
+        submitButton.enabled = false
+        
         let user:OCTUser = OCTUser(rawLogin: usernameTextField.text, server: OCTServer.dotComServer())
         let (clientID, clientSecret) = GithubClientUtility.clientIDAndSecret()
         
         OCTClient.setClientID(clientID, clientSecret: clientSecret)
-        OCTClient.signInAsUser(user, password: passwordTextField.text, oneTimePassword: oneTimePassword, scopes:OCTClientAuthorizationScopes.PublicRepository, note: nil, noteURL: nil, fingerprint: nil).deliverOn(RACScheduler.mainThreadScheduler()).subscribeNext(
+        OCTClient.signInAsUser(user, password: passwordTextField.text, oneTimePassword: nil, scopes:OCTClientAuthorizationScopes.PublicRepository, note: nil, noteURL: nil, fingerprint: nil).deliverOn(RACScheduler.mainThreadScheduler()).subscribeNext(
             { (client: AnyObject!) -> Void in
+                self.submitButton.enabled = true
                 self.didAuthenticateWithClient(client as! OCTClient)
             },
             error: { (error: NSError!) -> Void in
@@ -73,7 +90,9 @@ class LoginViewController: UIViewController {
     }
     
     private func showError(error: NSError) {
-        //TODO
+        //actual error seems to be useless, e.g. "Sign in Required"
+        errorLabel.text = "login:error".localized
+        submitButton.enabled = true
     }
 
 }

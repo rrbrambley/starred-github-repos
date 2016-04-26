@@ -7,5 +7,6 @@
 */
 
 "login:submit" = "Submit";
+"login:error" = "Login failed. Please try again.";
 "repository_table_view:title" = "Most Starred Repositories";
 "repository_cell:contributor" = "Top Contributor: ";
