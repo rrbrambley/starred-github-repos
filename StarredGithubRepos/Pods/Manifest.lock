@@ -1,15 +1,47 @@
 PODS:
+  - AFNetworking (1.3.4)
+  - ISO8601DateFormatter (0.7)
   - Locksmith (2.0.8)
+  - Mantle (1.3.1):
+    - Mantle/extobjc (= 1.3.1)
+  - Mantle/extobjc (1.3.1)
+  - OctoKit (0.7.8):
+    - AFNetworking (~> 1.3.3)
+    - ISO8601DateFormatter (~> 0.7.0)
+    - Mantle (~> 1.3.1)
+    - ReactiveCocoa (~> 2.2.2)
   - PureLayout (3.0.1)
+  - ReactiveCocoa (2.2.4):
+    - ReactiveCocoa/Core (= 2.2.4)
+    - ReactiveCocoa/no-arc (= 2.2.4)
+  - ReactiveCocoa/Core (2.2.4):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.2.4)
 
 DEPENDENCIES:
   - Locksmith (~> 2.0.8)
+  - OctoKit (from `https://github.com/rrbrambley/octokit.objc.git`, commit `391541a73a80503291a67d1525aece0a2bc66d3a`)
   - PureLayout (~> 3.0.1)
 
-SPEC CHECKSUMS:
-  Locksmith: a8ed41ac4c06506ea8cb199d8ec8a8d3d108eb2a
-  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
+EXTERNAL SOURCES:
+  OctoKit:
+    :commit: 391541a73a80503291a67d1525aece0a2bc66d3a
+    :git: https://github.com/rrbrambley/octokit.objc.git
 
-PODFILE CHECKSUM: 55e0265a713c57f931b87e6bf856680946371ca9
+CHECKOUT OPTIONS:
+  OctoKit:
+    :commit: 391541a73a80503291a67d1525aece0a2bc66d3a
+    :git: https://github.com/rrbrambley/octokit.objc.git
+
+SPEC CHECKSUMS:
+  AFNetworking: cf8e418e16f0c9c7e5c3150d019a3c679d015018
+  ISO8601DateFormatter: ab926648eebe497f4d167c0fd083992f959f1274
+  Locksmith: a8ed41ac4c06506ea8cb199d8ec8a8d3d108eb2a
+  Mantle: a516570b84c3cefb34b02647a6588a087dddc490
+  OctoKit: 8e00a49cf7c49ae6620fcbaba2a572a612ed976e
+  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
+  ReactiveCocoa: 78d9d1057f6e2595a67285b5adb0c90d0fc2237c
+
+PODFILE CHECKSUM: 04354e739f4385f0ac609a4ef4b0a3e39135cd4c
 
 COCOAPODS: 1.0.0.beta.8
