@@ -16,10 +16,12 @@ This simple Swift app uses the Github API (via OctoKit) to fetch the 100 most st
 
 To fetch the code:
 
-1. git clone git@github.com:rrbrambley/starred-github-repos.git
+1. Run `git clone git@github.com:rrbrambley/starred-github-repos.git`
 2. From the root of the repo, `git submodule update --init --recursive`.
-3. Run `./octokit.objc/script/bootstrap` as described [here](https://github.com/octokit/octokit.objc#importing-octokit).
-4. Open `StarredGithubRepos.xcworkspace` in Xcode
+3. Run `brew install xctool` (required for next step)
+4. Run `./octokit.objc/script/bootstrap` as described [here](https://github.com/octokit/octokit.objc#importing-octokit).
+5. Run `pod install` from the root of the StarredGithubRepos Xcode project.
+6. Open `StarredGithubRepos.xcworkspace` in Xcode
 
 The client ID and secret are stored in a `Secrets.plist` file in the Xcode project, which is not committed to this repository. Following these instructions to add your own client ID and secret:
 
