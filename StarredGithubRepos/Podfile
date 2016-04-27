@@ -6,17 +6,23 @@ use_frameworks!
 
 source 'https://github.com/CocoaPods/Specs.git'
 
+def common_pods
+    pod 'OctoKit', :git => 'https://github.com/rrbrambley/octokit.objc.git', :commit => '391541a73a80503291a67d1525aece0a2bc66d3a'
+    pod 'Swinject', '1.1.1'
+    pod 'SwiftyJSON', '2.3.1'
+end
+
 target 'StarredGithubRepos' do
-pod 'Locksmith', '~> 2.0.8'
-pod 'PureLayout', '~> 3.0.1'
-pod 'OctoKit', :git => 'https://github.com/rrbrambley/octokit.objc.git', :commit => '391541a73a80503291a67d1525aece0a2bc66d3a'
+    pod 'Locksmith', '~> 2.0.8'
+    pod 'PureLayout', '~> 3.0.1'
+    common_pods
 end
 
 target 'StarredGithubReposTests' do
-
+    common_pods
 end
 
 target 'StarredGithubReposUITests' do
-
+    common_pods
 end
 

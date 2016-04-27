@@ -9,7 +9,7 @@
 import Foundation
 import OctoKit
 
-class GithubDataManager {
+class GithubDataManager: DataFetching {
     static let sharedInstance = GithubDataManager()
     
     private var client: OCTClient?

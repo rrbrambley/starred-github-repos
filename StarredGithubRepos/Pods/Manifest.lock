@@ -17,11 +17,15 @@ PODS:
   - ReactiveCocoa/Core (2.2.4):
     - ReactiveCocoa/no-arc
   - ReactiveCocoa/no-arc (2.2.4)
+  - SwiftyJSON (2.3.1)
+  - Swinject (1.1.1)
 
 DEPENDENCIES:
   - Locksmith (~> 2.0.8)
   - OctoKit (from `https://github.com/rrbrambley/octokit.objc.git`, commit `391541a73a80503291a67d1525aece0a2bc66d3a`)
   - PureLayout (~> 3.0.1)
+  - SwiftyJSON (= 2.3.1)
+  - Swinject (= 1.1.1)
 
 EXTERNAL SOURCES:
   OctoKit:
@@ -41,7 +45,9 @@ SPEC CHECKSUMS:
   OctoKit: 8e00a49cf7c49ae6620fcbaba2a572a612ed976e
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
   ReactiveCocoa: 78d9d1057f6e2595a67285b5adb0c90d0fc2237c
+  SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
+  Swinject: 8c1b46e49c604f8c5c1f45f92ef314d3736bbef4
 
-PODFILE CHECKSUM: 04354e739f4385f0ac609a4ef4b0a3e39135cd4c
+PODFILE CHECKSUM: c5b7c24134b65b5b77a08bd04baa43bd93fe3646
 
 COCOAPODS: 1.0.0.beta.8
